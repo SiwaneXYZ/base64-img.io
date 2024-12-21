@@ -18,7 +18,7 @@
 
 إليك معاينة للأداة أثناء العمل:
 
-![Screenshot]([https://raw.githubusercontent.com/SiwaneXYZ/base64-img.io/refs/heads/main/Screenshot.png])
+![Screenshot]([Screenshot.png])
 
 ## التقنيات المستخدمة
 
