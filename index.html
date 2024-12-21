@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- وصف ميتا للصفحة -->
+    <meta name="description" content="أداة لتحويل الصور إلى تنسيق Base64 والعكس. يمكنك تحميل الصور وتحويلها إلى سلاسل نصية Base64 أو العكس بسهولة.">
+    <link rel="icon" href="favicon.png"
+    <!-- ميتا للكلمات المفتاحية -->
+    <meta name="keywords" content="Base64, تحويل الصور, صورة إلى Base64, Base64 إلى صورة, أداة تحويل, تحميل الصورة, تحويل البيانات">
+    
+    <!-- ميتا المؤلف -->
+    <meta name="author" content="siwane.xyz">
+    
+    <!-- ميتا للتوجيه الاجتماعي -->
+    <meta property="og:title" content="تحويل الصورة إلى Base64 والعكس">
+    <meta property="og:description" content="أداة لتحويل الصور إلى Base64 والعكس. يمكنك تحميل الصور وتحويلها إلى سلاسل نصية Base64 أو العكس بسهولة.">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2URjW8pG4femzgnNQTvY5b5MHLHs3Rzz2xtnf8UOrfQDzToHy3ZS5Wzyuk88D4hd55c-iNlQk9Pev5ilDgWPctgDN7VNMal0SrxAtQikTGLMciRXuO5N_Vt_w0l6jeoip3xDByDI2RvEkMRfptsS5v9tURlQaIUbfxbeik0D-vCwVYoHW00le3-i6L28/s1600/coverture.jpg">
+    <meta property="og:url" content="https://siwane.xyz">
+    
+    <meta name="twitter:card" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2URjW8pG4femzgnNQTvY5b5MHLHs3Rzz2xtnf8UOrfQDzToHy3ZS5Wzyuk88D4hd55c-iNlQk9Pev5ilDgWPctgDN7VNMal0SrxAtQikTGLMciRXuO5N_Vt_w0l6jeoip3xDByDI2RvEkMRfptsS5v9tURlQaIUbfxbeik0D-vCwVYoHW00le3-i6L28/s1600/coverture.jpg">
+    <meta name="twitter:title" content="تحويل الصورة إلى Base64 والعكس">
+    <meta name="twitter:description" content="أداة لتحويل الصور إلى Base64 والعكس.">
+
+    <title>تحويل الصورة إلى Base64 والعكس</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "محول الصور إلى Base64 والعكس",
+        "url": "https://siwane.xyz",
+        "description": "أداة لتحويل الصور إلى تنسيق Base64 والعكس بسهولة.",
+        "author": {
+            "@type": "Organization",
+            "name": "siwane.xyz"
+        },
+        "keywords": "Base64, تحويل الصور, صورة إلى Base64, Base64 إلى صورة, أداة تحويل, تحميل الصورة",
+        "mainEntityOfPage": "https://siwane.xyz"
+    }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>تحويل الصورة إلى Base64 والعكس</h1>
+        
+        <!-- تحويل Base64 إلى صورة -->
+        <div class="section">
+            <h2>من Base64 إلى صورة</h2>
+            <textarea id="baseInput" placeholder="أدخل نص Base64 هنا"></textarea>
+            <button onclick="convertToImage()">تحويل إلى صورة</button>
+            <div id="imageContainer">
+                <p>معاينة الصورة هنا...</p>
+            </div>
+            <a id="downloadLink" href="#" style="display: none;" download>تحميل الصورة</a>
+        </div>
+
+        <hr>
+
+        <!-- تحويل صورة إلى Base64 -->
+        <div class="section">
+            <h2>من صورة إلى Base64</h2>
+            <input type="file" id="imageFile" accept="image/*" onchange="convertToBase64()">
+            <textarea id="baseOutput" placeholder="نص Base64 الناتج" readonly></textarea>
+            <button onclick="copyBase64()">نسخ النص</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- إضافة رابط إلى ملف JavaScript المنفصل -->
+</body>
+</html>
