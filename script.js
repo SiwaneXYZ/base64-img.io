@@ -7,8 +7,14 @@ function convertToImage() {
     if (baseInput) {
         const img = document.createElement('img');
         img.src = `data:image/png;base64,${baseInput}`;
-        imageContainer.innerHTML = '';
-        imageContainer.appendChild(img);
+        img.alt = 'الصورة المحولة'; // إضافة نص بديل للصورة
+        img.style.maxWidth = '100%'; // تجعل الصورة لا تتجاوز عرض الحقل
+        img.style.maxHeight = '100%'; // تجعل الصورة لا تتجاوز ارتفاع الحقل
+        img.style.objectFit = 'contain'; // تجعل الصورة تتناسب داخل الحقل
+
+        imageContainer.innerHTML = ''; // إزالة أي محتوى سابق داخل الحقل
+        imageContainer.appendChild(img); // إضافة الصورة داخل الحقل
+
         downloadLink.style.display = 'inline-block';
         downloadLink.href = img.src;
         downloadLink.textContent = 'تحميل الصورة';
