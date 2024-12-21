@@ -1,0 +1,128 @@
+/* إعادة تصميم الألوان والخطوط */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    resize: none;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+#imageContainer {
+    margin-top: 20px;
+    min-height: 200px;
+    border: 2px dashed #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 16px;
+    color: #666;
+}
+
+#downloadLink {
+    display: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#downloadLink:hover {
+    background-color: #0b7dda;
+}
+
+a {
+    text-decoration: none;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+/* لجعل التصميم متجاوبًا مع الأجهزة المختلفة */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    textarea, input[type="file"] {
+        width: 100%;
+    }
+}
