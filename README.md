@@ -18,7 +18,7 @@
 
 إليك معاينة للأداة أثناء العمل:
 
-![Screenshot](https://via.placeholder.com/600x400?text=Base64+Image+Converter)
+![Screenshot]([https://via.placeholder.com/600x400?text=Base64+Image+Converter](https://raw.githubusercontent.com/SiwaneXYZ/base64-img.io/refs/heads/main/Screenshot.png))
 
 ## التقنيات المستخدمة
 
