@@ -1,49 +1,60 @@
-/* إعادة تصميم الألوان والخطوط */
+/* إعدادات أساسية */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f7;
+    background-color: #eef2f5; /* تغيير الخلفية لتصبح أكثر نعومة */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    line-height: 1.6; /* تحسين قراءة النصوص */
 }
 
+/* الحاوية الرئيسية */
 .container {
     width: 90%;
     max-width: 800px;
     background-color: #ffffff;
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px; /* زيادة انحناء الحواف */
     text-align: center;
     box-sizing: border-box;
 }
 
+/* العناوين */
 h1 {
     font-size: 28px;
-    color: #333;
+    color: #2c3e50; /* لون أكثر عمقًا للعنوان */
     margin-bottom: 20px;
+    font-weight: bold; /* إبراز العنوان */
 }
 
 h2 {
     font-size: 22px;
-    color: #333;
+    color: #34495e;
     margin-bottom: 15px;
 }
 
+/* الحقول النصية */
 textarea {
     width: 100%;
     height: 150px;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 15px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #ced6e0; /* لون حد أكثر وضوحًا */
     box-sizing: border-box;
     resize: none;
     font-size: 14px;
     background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #4CAF50; /* تغيير اللون عند التركيز */
+    outline: none;
 }
 
 input[type="file"] {
@@ -51,35 +62,40 @@ input[type="file"] {
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #ced6e0;
     box-sizing: border-box;
+    font-size: 14px;
 }
 
+/* الأزرار */
 button {
     padding: 12px 20px;
     background-color: #4CAF50;
     color: #fff;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* جعل الحواف أكثر انحناءً */
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #45a049;
+    transform: translateY(-2px); /* إضافة تأثير بسيط عند التحويم */
 }
 
 button:active {
     background-color: #3e8e41;
+    transform: translateY(0); /* إزالة التحريك عند الضغط */
 }
 
+/* حاوية الصورة */
 #imageContainer {
     margin-top: 20px;
-    min-height: 200px;
+    min-height: 250px; /* زيادة الارتفاع الافتراضي */
     border: 2px dashed #ddd;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 12px; /* حواف أكثر نعومة */
     background-color: #fafafa;
     display: flex;
     justify-content: center;
@@ -87,6 +103,8 @@ button:active {
     flex-direction: column;
     font-size: 16px;
     color: #666;
+    overflow: hidden; /* منع تجاوز المحتوى للحقل */
+    position: relative; /* لتنسيق المحتوى داخل الحقل */
 }
 
 #imageContainer img {
@@ -97,6 +115,7 @@ button:active {
     margin: 0 auto;
 }
 
+/* زر تحميل الصورة */
 #downloadLink {
     display: none;
     margin-top: 10px;
@@ -104,8 +123,9 @@ button:active {
     background-color: #2196F3;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px; /* حواف زر التحميل */
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 #downloadLink:hover {
@@ -116,6 +136,7 @@ a {
     text-decoration: none;
 }
 
+/* أقسام إضافية */
 .section {
     margin-bottom: 40px;
 }
@@ -132,5 +153,9 @@ a {
 
     textarea, input[type="file"] {
         width: 100%;
+    }
+
+    #imageContainer {
+        min-height: 200px; /* تقليل الارتفاع في الشاشات الصغيرة */
     }
 }
